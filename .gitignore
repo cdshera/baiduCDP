@@ -11,7 +11,7 @@
 *.aps
 *.suo
 *.db
-*.dll
+#*.dll
 #*.lib
 *.sdf
 *.db
