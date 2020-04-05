@@ -12,7 +12,7 @@
 *.suo
 *.db
 *.dll
-*.lib
+#*.lib
 *.sdf
 *.db
 *.iobj
