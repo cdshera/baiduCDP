@@ -2,6 +2,7 @@
 #include <shlwapi.h>
 #include <thread>
 #include "curl/curl.h"
+
 #include <WinInet.h>
 #include <TlHelp32.h>
 #include <tchar.h>

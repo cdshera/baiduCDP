@@ -894,8 +894,8 @@ void CWkeWindow::runApp(Application* app)
 {
 	DWORD dwThread = ::GetThreadId(::GetCurrentThread());
 	memset(app, 0, sizeof(Application));
-	app->url = L"http://baiducdp.com/ui/element.html"; // 使用hook的方式加载资源
-
+//	app->url = L"https://baidu.com/"; // 使用hook的方式加载资源
+	app->url = L"file:///D:/Demo/BaiduCdpUi/element.html"; // 使用hook的方式加载资源
 	if (!createWebWindow(app)) {
 		PostQuitMessage(0);
 		return;

@@ -1,14 +1,12 @@
 ﻿#忽略这些依赖的库文件可以到
 #发布页面下载https://github.com/cool2528/baiduCDP/releases
 /.vs
-/include
-/lib
 /LocalStorage
 /update/Debug
 /update/Release
 #防止编译器生成的文件也上传
-/Debug
-/Release
+#/Debug
+#/Release
 #这些都是vs项目生成的文件
 *.aps
 *.suo
