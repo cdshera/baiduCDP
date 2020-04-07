@@ -894,8 +894,9 @@ void CWkeWindow::runApp(Application* app)
 {
 	DWORD dwThread = ::GetThreadId(::GetCurrentThread());
 	memset(app, 0, sizeof(Application));
-//	app->url = L"https://baidu.com/"; // 使用hook的方式加载资源
-	app->url = L"file:///D:/Demo/BaiduCdpUi/element.html"; // 使用hook的方式加载资源
+	app->url = L"http://baiducdp.com/ui/element.html"; // 使用hook的方式加载资源
+	//app->url = L"file:///D:/Demo/BaiduCdpUi/element.html"; // 使用hook的方式加载资源
+	//app->url = L"file:///./ui/element.html"; // 使用hook的方式加载资源
 	if (!createWebWindow(app)) {
 		PostQuitMessage(0);
 		return;
@@ -996,7 +997,7 @@ bool CWkeWindow::createWebWindow(Application* app)
 	m_ShadowWnd = BindShadowWindow(m_hwnd);
 	if (m_ShadowWnd)
 		m_ShadowWnd->Setup(5, 8, 192, 0);
-	::SetTimer(m_hwnd, UPDTAE_UI_TIMEID, 1000, TimeProc);
+	//::SetTimer(m_hwnd, UPDTAE_UI_TIMEID, 1000, TimeProc);
 	//设置窗口的标题
 	wkeSetWindowTitleW(app->window, APP_NAME);
 	//开启Ajax 跨域请求支持
