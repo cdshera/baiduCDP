@@ -17,6 +17,7 @@ std::mutex g_mutx;
 std::shared_ptr<CWkeWindow> CWkeWindow::Instance = nullptr;
 WNDPROC CWkeWindow::m_oldProc = NULL;
 
+
 void* CWkeWindow::AlloclocalHeap(const std::string& strBuffer)
 { 
 	char* pResutPtr = nullptr;

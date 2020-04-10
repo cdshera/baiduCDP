@@ -6,6 +6,7 @@
 #include "PanParse.h"
 #include "shadow_window.h"
 #include "glog/logging.h"
+
 // #define GOOGLE_GLOG_DLL_DECL
 // #define GLOG_NO_ABBREVIATED_SEVERITIES
 #ifndef _DEBUG
@@ -127,7 +128,7 @@ public:
 private:
 	explicit CWkeWindow();
 	CWkeWindow(const CWkeWindow&);
-	CWkeWindow& operator =(const CWkeWindow&);
+//	CWkeWindow& operator =(const CWkeWindow&);
 	static std::shared_ptr<CWkeWindow> Instance;
 private:
 	

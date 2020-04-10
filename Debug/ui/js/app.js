@@ -744,24 +744,24 @@ var app = new Vue({
 		appInit_func:function(){
 			isLoginBaidu();
 			this.is_show = false;
-			let versiondata = isUpdate(this.currentversion);
-			if(versiondata === undefined){
-				this.newVersion = this.currentversion;
-				this.is_updtate = true;
-			}
-			else
-			{
-				if(versiondata==="" || versiondata==="{}"){
-					this.newVersion = this.currentversion;
-				}else{
-					this.is_updtate = false;
-					let jsondata = JSON.parse(versiondata);
-					this.newVersion = jsondata.version;
-					this.newVersionDownloadUrl = jsondata.downloadUrl;
-					this.update_info_msg = jsondata.upcontent;
-					this.UpdateDlgShow = true;
-				}
-			}
+			// let versiondata = isUpdate(this.currentversion);
+			// if(versiondata === undefined){
+			// 	this.newVersion = this.currentversion;
+			// 	this.is_updtate = true;
+			// }
+			// else
+			// {
+			// 	if(versiondata==="" || versiondata==="{}"){
+			// 		this.newVersion = this.currentversion;
+			// 	}else{
+			// 		this.is_updtate = false;
+			// 		let jsondata = JSON.parse(versiondata);
+			// 		this.newVersion = jsondata.version;
+			// 		this.newVersionDownloadUrl = jsondata.downloadUrl;
+			// 		this.update_info_msg = jsondata.upcontent;
+			// 		this.UpdateDlgShow = true;
+			// 	}
+			// }
 		},
 		
 		/*检测是否需要更新*/
