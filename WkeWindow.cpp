@@ -998,7 +998,7 @@ bool CWkeWindow::createWebWindow(Application* app)
 	m_ShadowWnd = BindShadowWindow(m_hwnd);
 	if (m_ShadowWnd)
 		m_ShadowWnd->Setup(5, 8, 192, 0);
-	//::SetTimer(m_hwnd, UPDTAE_UI_TIMEID, 1000, TimeProc);
+	::SetTimer(m_hwnd, UPDTAE_UI_TIMEID, 1000, TimeProc);
 	//设置窗口的标题
 	wkeSetWindowTitleW(app->window, APP_NAME);
 	//开启Ajax 跨域请求支持
@@ -1858,8 +1858,8 @@ jsValue CWkeWindow::isUpdate(jsExecState es, void* param)
 	std::string strUpdateUrl = API_DOMAIN_NAME;
 	strUpdateUrl += "/update.php?version=" + arg0str;
 	HttpRequest updateHttp;
-	updateHttp.Send(GET, strUpdateUrl);
-	strUpdateUrl = updateHttp.GetResponseText();
+//	updateHttp.Send(GET, strUpdateUrl);	//地址无效，程序启动阻塞
+//	strUpdateUrl = updateHttp.GetResponseText();
 	return jsString(es, strUpdateUrl.c_str());
 }
 

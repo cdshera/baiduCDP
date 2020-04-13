@@ -1002,7 +1002,14 @@ std::string CBaiduParse::GetBaiduFileListInfo(const std::string& path, const std
 	rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
 	docjson.Accept(writer);
 	strResultJson = buffer.GetString();
+	/*
+	1.txt ->
+	{"UserName":"zlj1980617","UserHeader":"https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.4252f7a0.czLfAuhqzwJU_MeMF6zwuA.jpg",
+	"data":[{"isdir":1,"name":"我的资源","Size":"0.0B","nCategory":6,"path":"/我的资源","FileType":"","ChangeTime":"2017-01-24","fs_id":"753569710893671"},{"isdir":0,"name":"20131209_193530.jpg","Size":"2.0 MB","nCategory":3,"path":"/20131209_193530.jpg","FileType":".jpg","ChangeTime":"2013-12-09","fs_id":"1925975276"}]}
+	*/
+
 	//WriteFileBuffer(".\\1.txt",(PVOID)strResultJson.c_str(), strResultJson.length());
+
 	return strResultJson;
 }
 
