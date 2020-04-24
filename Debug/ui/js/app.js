@@ -210,7 +210,7 @@ var app = new Vue({
 			window.open("https://pan.baidu.com/","","",false)
 			// window.open("http://www.worldwidetracing.com/medical/user/login","","",false)
 		},
-		/*切换用户正在下载的列表 1 是正在下载界面  2是已完成的下载列表界面*/
+		/*切换用户正在下载的列表 1 是正在下载界面  2是已完成的下载列表界面 3下载失败*/
 		downShowFunc:function(index){
 			switch(index)
 			{
@@ -745,24 +745,24 @@ var app = new Vue({
 		appInit_func:function(){
 			isLoginBaidu();
 			this.is_show = false;
-			let versiondata = isUpdate(this.currentversion);
-			if(versiondata === undefined){
-				this.newVersion = this.currentversion;
-				this.is_updtate = true;
-			}
-			else
-			{
-				if(versiondata==="" || versiondata==="{}"){
-					this.newVersion = this.currentversion;
-				}else{
-					this.is_updtate = false;
-					let jsondata = JSON.parse(versiondata);
-					this.newVersion = jsondata.version;
-					this.newVersionDownloadUrl = jsondata.downloadUrl;
-					this.update_info_msg = jsondata.upcontent;
-					this.UpdateDlgShow = true;
-				}
-			}
+			// let versiondata = isUpdate(this.currentversion);
+			// if(versiondata === undefined){
+			// 	this.newVersion = this.currentversion;
+			// 	this.is_updtate = true;
+			// }
+			// else
+			// {
+			// 	if(versiondata==="" || versiondata==="{}"){
+			// 		this.newVersion = this.currentversion;
+			// 	}else{
+			// 		this.is_updtate = false;
+			// 		let jsondata = JSON.parse(versiondata);
+			// 		this.newVersion = jsondata.version;
+			// 		this.newVersionDownloadUrl = jsondata.downloadUrl;
+			// 		this.update_info_msg = jsondata.upcontent;
+			// 		this.UpdateDlgShow = true;
+			// 	}
+			// }
 		},
 		
 		/*检测是否需要更新*/
